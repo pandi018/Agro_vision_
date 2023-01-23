@@ -1,0 +1,124 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    </head>
+  <body><br>
+    <header>
+        <nav>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Help</a></li>
+          </ul>
+        </nav>
+      </header><br><br>
+    <div class="form">
+    <!-- <img src="./crop.jpg" alt="Random Image"> -->
+    <input type="file" id="image-input">
+    <button type="button" onclick="displayImage1()">Upload Image</button>
+    </div><br><br>
+    <img id="display-image" style="display:none;"><br><br>
+    <p id="description"></p>
+    <style>
+.form{
+    display: flex;
+}
+ header{
+width: 100%;
+  background-color: rgb(230, 217, 217);
+  color: rgb(185, 50, 50);
+  padding: 1em;
+  filter: alpha(opacity=50); /* IE */
+  -moz-opacity: 0.5; /* Mozilla */
+  opacity: 0.5; /* CSS */
+}
+body{
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav li {
+  display: inline-block;
+  margin-right: 1em;
+}
+
+nav a {
+  color: rgb(126, 49, 208);
+  text-decoration: none;
+}
+
+main {
+  padding: 1em;
+}
+
+main h1 {
+  text-align: center;
+}
+
+section {
+  margin-bottom: 1em;
+}
+a{
+  text-decoration: none;
+}
+section h2 {
+  margin-bottom: 0.5em;
+}
+
+ul {
+  margin-top: 0;
+  padding-left: 1em;
+}
+     body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+img {
+  width: 20%;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+p {
+  font-size: 24px;
+  font-weight: bold;
+  color: blue;
+}
+
+
+    </style>
+    <script>
+    function displayImage1()
+    {
+        var input = document.getElementById("image-input");
+          var image = document.getElementById("display-image");
+          image.src = URL.createObjectURL(input.files[0]);
+          image.style.display = "block";
+      const descriptions = [
+        "Increasing the interval between potato crops and weed hosts reduces soil-borne inoculum. ...",
+        "Potato seed with visible infections of black dot should be avoided.",
+        "Reducing plant stress is an important management tactic for black dot.",
+        "A stunning sunset"
+      ];
+      
+      // get a random description from the array
+      const randomDescription = descriptions[Math.floor(Math.random() * descriptions.length)];
+      
+      // set the text of the <p> element with the id "description" to the random description
+      document.getElementById("description").innerText = randomDescription;
+      }
+    </script>
+  </body>
+</html>
+

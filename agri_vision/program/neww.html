@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  </head>
+  <link rel="stylesheet" href="trans.css">
+  <body>
+    <header>
+        <nav>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Help</a></li>
+          </ul>
+        </nav>
+      </header>
+    <!-- <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <img src="./crop.jpg" class="img-fluid" alt="Random Image">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <p id="description" class="text-center"></p>
+        </div>
+      </div>
+    </div> -->
+    <br>
+    <br>
+    <form>
+        <input type="file" id="image-input" accept="image/*">
+        <button type="button" onclick="displayImage()">Upload Image</button>
+      </form>
+      <br>
+      <img id="display-image" style="display:none;">
+      <p id="display_text" style="display: none;"></p>
+      <script>
+        function displayImage() {
+          var input = document.getElementById("image-input");
+          var image = document.getElementById("display-image");
+          var text = document.getElementById("display_text");
+          image.src = URL.createObjectURL(input.files[0]);
+          image.style.display = "block";
+          const descriptions = [
+        "A beautiful landscape",
+        "A cute puppy",
+        "A delicious meal",
+        "A stunning sunset"
+      ];
+      
+      // get a random description from the array
+      const randomDescription = descriptions[Math.floor(Math.random() * descriptions.length)];
+      
+      // set the text of the <p> element with the id "description" to the random description
+      document.getElementById("display_text").innerText = randomDescription;
+        }
+      </script>
+  </body>
+</html>

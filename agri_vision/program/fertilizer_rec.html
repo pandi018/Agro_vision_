@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Fertilizer Recommendation</title>
+    <style>
+        body {
+  font-family: Arial, sans-serif;
+}
+
+h1 {
+  text-align: center;
+}
+
+form {
+  width: 50%;
+  margin: 0 auto;
+  text-align: left;
+}
+input{
+  filter: alpha(opacity=50); /* IE */
+        -moz-opacity: 0.5; /* Mozilla */
+        opacity: 0.8; /* CSS */
+        background-color: rgb(255, 255, 255);
+}
+
+label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 10px;
+}
+
+input[type="text"], input[type="number"] {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-bottom: 16px;
+  margin-top: 6px;
+  resize: vertical;
+}
+
+input[type="submit"] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 16px;
+}
+body {
+        background-image: url('./agro.jpg');
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+        filter: alpha(opacity=50); /* IE */
+        -moz-opacity: 0.5; /* Mozilla */
+        opacity: 0.8; /* CSS */
+      }
+input[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+    </style>
+  </head>
+  <body>
+    <h1>Fertilizer Recommendation Form</h1>
+    <form>
+      <label>Temperature:</label>
+      <input type="number" name="temperature">
+      <br>
+      <label>Humidity:</label>
+      <input type="number" name="humidity">
+      <br>
+      <label>Moisture:</label>
+      <input type="number" name="moisture">
+      <br>
+      <label>Soil Type:</label>
+      <input type="text" name="soil_type">
+      <br>
+      <label>Crop Type:</label>
+      <input type="text" name="crop_type">
+      <br>
+      <label>Nitrogen:</label>
+      <input type="number" name="nitrogen">
+      <br>
+      <label>Potassium:</label>
+      <input type="number" name="potassium">
+      <br>
+      <label>Phosphorus:</label>
+      <input type="number" name="phosphorus">
+      <!-- <br>
+      <label>Fertilizer Name:</label>
+      <input type="text" name="fertilizer_name">
+      <br> -->
+      <input type="submit" value="Submit">
+    </form>
+    <script>
+        document.querySelector("form").addEventListener("submit", function(e) {
+  e.preventDefault(); // prevent the form from submitting to the server
+
+  // get the form input values
+  var temperature = document.querySelector("input[name='temperature']").value;
+  var humidity = document.querySelector("input[name='humidity']").value;
+  var moisture = document.querySelector("input[name='moisture']").value;
+  var soilType = document.querySelector("input[name='soil_type']").value;
+  var cropType = document.querySelector("input[name='crop_type']").value;
+  var nitrogen = document.querySelector("input[name='nitrogen']").value;
+  var potassium = document.querySelector("input[name='potassium']").value;
+  var phosphorus = document.querySelector("input[name='phosphorus']").value;
+  // var fertilizerName = document.querySelector("input[name='fertilizer_name']").value;
+
+  // do some calculations or logic to generate the fertilizer recommendation
+  var fertilizerRecommendation = "";
+  if (soilType === "clay") {
+    fertilizerRecommendation = "Use fertilizer A";
+  } else if (soilType === "loam") {
+    fertilizerRecommendation = "Use fertilizer B";
+  } else {
+    fertilizerRecommendation = "Use fertilizer C";
+  }
+
+  // display the fertilizer recommendation
+  var recommendationDiv = document.createElement("div");
+  recommendationDiv.innerHTML = "Fertilizer Recommendation: " + fertilizerRecommendation;
+  document.querySelector("body").appendChild(recommendationDiv);
+});
+</script>
+</body>
+</html>

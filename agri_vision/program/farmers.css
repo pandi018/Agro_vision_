@@ -1,0 +1,101 @@
+body{
+    font-family: Arial, sans-serif;
+         background-image: url("./dow.jpg");
+          background-size: cover;
+          height: 100vh; 
+    color: rgb(199, 187, 187); 
+  }
+  p{
+    text-decoration: none;
+  }
+  header, footer {
+    /* background-color: rgb(238, 233, 233); */
+    color: rgb(202, 176, 176);
+    padding: 1em;
+    filter: alpha(opacity=50); /* IE */
+        -moz-opacity: 0.5; /* Mozilla */
+        opacity: 0.8; /* CSS */
+  }
+  body{
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+  }
+  #buttons{
+    display: flex;
+    /* text-decoration: none; */
+  }
+  /* button{
+    text-decoration: none;
+  } */
+  nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  nav li {
+    display: inline-block;
+    margin-right: 1em;
+  }
+  
+  nav a {
+    color: rgb(126, 49, 208);
+    text-decoration: none;
+  }
+  
+  main {
+    padding: 1em;
+  }
+  
+  main h1 {
+    text-align: center;
+  }
+  
+  section {
+    margin-bottom: 1em;
+  }
+  p{
+    color: aliceblue;
+  }
+  a{
+    text-decoration: none;
+  }
+  
+  section h2 {
+    margin-bottom: 0.5em;
+  }
+  
+  ul {
+    margin-top: 0;
+    padding-left: 1em;
+  }
+  #buttons {
+    /* display: flex; */
+    justify-content: center;
+    align-items: center;
+  }
+  .but{
+    padding-left: 70px;
+    padding-top: 100px;
+  }
+  
+  button {
+    padding: 10px 20px;
+    font-size: 1em;
+    margin: 10px;
+    background-color: #4CAF50;
+    color: white;
+    width: 200px;
+    height: 80px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #3e8e41;
+  }
+  .foot{
+    padding-top: 10px;
+  }
